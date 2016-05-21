@@ -34,7 +34,7 @@ def parse_item(item):
     title = item.xpath("./title")[0].text
     link = item.xpath("./link")[0].text
     pub_date = item.xpath("./pubDate")[0].text
-    place, quality = title.split(" was rated as ")
+    place, quality = title.split(" water quality was rated as ")
     place = place.strip()
     quality = quality.strip()
     m = re.match('([^\)]*)\((.*)\)', quality)
